@@ -16,135 +16,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-Lu-mam">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <state key="normal" title="1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-Lu-mam">
+                                <rect key="frame" x="16" y="89" width="64" height="64"/>
+                                <state key="normal" title="1" image="oneTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eJP-bs-3bF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izt-DG-Kq6">
-                                <rect key="frame" x="70" y="20" width="46" height="30"/>
-                                <state key="normal" title="2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izt-DG-Kq6">
+                                <rect key="frame" x="88" y="89" width="64" height="64"/>
+                                <state key="normal" title="2" image="twoTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jS7-ZL-AIP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHY-gz-dRR">
-                                <rect key="frame" x="124" y="20" width="46" height="30"/>
-                                <state key="normal" title="3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHY-gz-dRR">
+                                <rect key="frame" x="160" y="89" width="64" height="64"/>
+                                <state key="normal" title="3" image="threeTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yp7-Xm-6qh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-Ap-muM">
-                                <rect key="frame" x="178" y="20" width="46" height="30"/>
-                                <state key="normal" title="4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-Ap-muM">
+                                <rect key="frame" x="232" y="89" width="64" height="64"/>
+                                <state key="normal" title="4" image="fourTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fsb-e5-1MK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pge-hf-Sjd">
-                                <rect key="frame" x="16" y="58" width="46" height="30"/>
-                                <state key="normal" title="5">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pge-hf-Sjd">
+                                <rect key="frame" x="16" y="161" width="64" height="64"/>
+                                <state key="normal" title="5" image="fiveTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MYW-t7-lAw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-6q-oHD">
-                                <rect key="frame" x="70" y="58" width="46" height="30"/>
-                                <state key="normal" title="6">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-6q-oHD">
+                                <rect key="frame" x="88" y="161" width="64" height="64"/>
+                                <state key="normal" title="6" image="sixTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7bH-a3-VLC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9n-7z-k3M">
-                                <rect key="frame" x="124" y="58" width="46" height="30"/>
-                                <state key="normal" title="7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9n-7z-k3M">
+                                <rect key="frame" x="160" y="161" width="64" height="64"/>
+                                <state key="normal" title="7" image="sevenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XhO-Ss-LYn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxR-0q-JAR">
-                                <rect key="frame" x="178" y="58" width="46" height="30"/>
-                                <state key="normal" title="8">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxR-0q-JAR">
+                                <rect key="frame" x="232" y="161" width="64" height="64"/>
+                                <state key="normal" title="8" image="eightTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EWG-Jr-brh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC2-im-mfD">
-                                <rect key="frame" x="16" y="96" width="46" height="30"/>
-                                <state key="normal" title="9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC2-im-mfD">
+                                <rect key="frame" x="16" y="233" width="64" height="64"/>
+                                <state key="normal" title="9" image="nineTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WLN-oY-GKz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxz-FG-mGx">
-                                <rect key="frame" x="70" y="96" width="46" height="30"/>
-                                <state key="normal" title="10">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxz-FG-mGx">
+                                <rect key="frame" x="88" y="233" width="64" height="64"/>
+                                <state key="normal" title="10" image="tenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hso-4u-372"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DN-Ol-j3X">
-                                <rect key="frame" x="124" y="96" width="46" height="30"/>
-                                <state key="normal" title="11">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DN-Ol-j3X">
+                                <rect key="frame" x="160" y="233" width="64" height="64"/>
+                                <state key="normal" title="11" image="elevenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bnj-lV-ggF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4J-iz-mym">
-                                <rect key="frame" x="16" y="134" width="46" height="30"/>
-                                <state key="normal" title="13">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4J-iz-mym">
+                                <rect key="frame" x="16" y="305" width="64" height="64"/>
+                                <state key="normal" title="13" image="thirteenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r9X-rg-h8X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duD-LF-bSD">
-                                <rect key="frame" x="70" y="134" width="46" height="30"/>
-                                <state key="normal" title="14">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duD-LF-bSD">
+                                <rect key="frame" x="88" y="305" width="64" height="64"/>
+                                <state key="normal" title="14" image="fourteenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nvp-3E-69e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-Jd-ih9">
-                                <rect key="frame" x="124" y="134" width="46" height="30"/>
-                                <state key="normal" title="15">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-Jd-ih9">
+                                <rect key="frame" x="160" y="305" width="64" height="64"/>
+                                <state key="normal" title="15" image="fifteenTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ymF-JM-ZdE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-Kl-GJy">
-                                <rect key="frame" x="178" y="134" width="46" height="30"/>
-                                <state key="normal" title="#blank">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-Kl-GJy">
+                                <rect key="frame" x="232" y="305" width="64" height="64"/>
+                                <state key="normal" title="blank" image="blankTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -152,7 +152,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-R9-0k2">
-                                <rect key="frame" x="145" y="202" width="46" height="30"/>
+                                <rect key="frame" x="169" y="441" width="46" height="30"/>
                                 <state key="normal" title="Suffle">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -161,7 +161,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d2-Uz-qvj">
-                                <rect key="frame" x="45" y="202" width="46" height="30"/>
+                                <rect key="frame" x="97" y="441" width="46" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -169,23 +169,23 @@
                                     <action selector="didTapResetButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HZe-0S-2Yt"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="19v-yc-6Ii">
-                                <rect key="frame" x="61" y="250" width="118" height="31"/>
-                                <connections>
-                                    <action selector="didMoveSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hck-gL-Ko5"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzH-CO-a4U">
-                                <rect key="frame" x="178" y="96" width="46" height="30"/>
-                                <state key="normal" title="12">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzH-CO-a4U">
+                                <rect key="frame" x="232" y="233" width="64" height="64"/>
+                                <state key="normal" title="12" image="twelveTile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapTileButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zXa-hp-40Q"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="19v-yc-6Ii">
+                                <rect key="frame" x="95" y="514" width="122" height="31"/>
+                                <connections>
+                                    <action selector="didMoveSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hck-gL-Ko5"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="blankTile" destination="Kvt-Kl-GJy" id="3Oy-Fa-Rhy"/>
@@ -213,4 +213,22 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="blankTile.png" width="120" height="120"/>
+        <image name="eightTile.png" width="120" height="120"/>
+        <image name="elevenTile.png" width="120" height="120"/>
+        <image name="fifteenTile.png" width="120" height="120"/>
+        <image name="fiveTile.png" width="120" height="120"/>
+        <image name="fourTile.png" width="120" height="120"/>
+        <image name="fourteenTile.png" width="120" height="120"/>
+        <image name="nineTile.png" width="120" height="120"/>
+        <image name="oneTile.png" width="120" height="120"/>
+        <image name="sevenTile.png" width="120" height="120"/>
+        <image name="sixTile.png" width="120" height="120"/>
+        <image name="tenTile.png" width="120" height="120"/>
+        <image name="thirteenTile.png" width="120" height="120"/>
+        <image name="threeTile.png" width="120" height="120"/>
+        <image name="twelveTile.png" width="120" height="120"/>
+        <image name="twoTile.png" width="120" height="120"/>
+    </resources>
 </document>
