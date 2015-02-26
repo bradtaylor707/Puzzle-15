@@ -26,6 +26,7 @@
     self.gameTiles = gameTiles;
     self.numberOfTiles = [self.gameTiles count];
     self.blankIndex = self.numberOfTiles - 1;
+    prevMove = 0;
 }
 
 -(NSMutableArray *) shuffleTiles
@@ -34,7 +35,6 @@
     NSInteger moves[4] = {-4, -1, 1, 4};
     long unsigned index;
     NSInteger move;
-    prevMove = 0;
     do {
         index = random() % 4;
         move = moves[index];

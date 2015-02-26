@@ -92,16 +92,16 @@ static const CGFloat animationSpeed = 0.35;
         NSMutableArray *array = [self.puzzleGame shuffleTiles];
         UIButton *tile1 = [array objectAtIndex:0];
         UIButton *tile2 = [array objectAtIndex:1];
-        
         CGRect temp = tile2.frame;
         tile2.frame = tile1.frame;
         tile1.frame = temp;
-        
+        array = nil;
+        tile1 = nil;
+        tile2 = nil;
     } completion:^(BOOL finished) {
         animationInProgress = NO;
-        if ( --difficulty >= 0 ) {
+        if ( --difficulty >= 0 )
             [self didTapShuffleButton:sender];
-        }
     }];
     difficulty = diffCopy;
 }
