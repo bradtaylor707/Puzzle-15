@@ -86,19 +86,24 @@ static const CGFloat animationSpeed = 0.35;
 -(IBAction) didTapShuffleButton:(UIButton *)sender {
     if ( animationInProgress )
         return;
-    for (int i = 0; i < difficulty; i++) {
+    NSInteger diffCopy = difficulty;
+    [UIView animateWithDuration:animationSpeed animations:^{
+        animationInProgress = YES;
         NSMutableArray *array = [self.puzzleGame shuffleTiles];
         UIButton *tile1 = [array objectAtIndex:0];
         UIButton *tile2 = [array objectAtIndex:1];
-        [UIView animateWithDuration:animationSpeed animations:^{
-            animationInProgress = YES;
-            CGRect temp = tile2.frame;
-            tile2.frame = tile1.frame;
-            tile1.frame = temp;
-        } completion:^(BOOL finished) {
-            animationInProgress = NO;
-        }];
-    }
+        
+        CGRect temp = tile2.frame;
+        tile2.frame = tile1.frame;
+        tile1.frame = temp;
+        
+    } completion:^(BOOL finished) {
+        animationInProgress = NO;
+        if ( --difficulty >= 0 ) {
+            [self didTapShuffleButton:sender];
+        }
+    }];
+    difficulty = diffCopy;
 }
 
 // reset button, revert the tiles

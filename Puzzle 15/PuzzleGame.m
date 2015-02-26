@@ -33,17 +33,13 @@
     NSMutableArray *tilesToSwap = [NSMutableArray arrayWithObject:[self.gameTiles objectAtIndex:self.blankIndex]];
     NSInteger moves[4] = {-4, -1, 1, 4};
     long unsigned index;
-    
     NSInteger move;
     prevMove = 0;
-    
     do {
         index = random() % 4;
         move = moves[index];
     } while ( prevMove + move == 0 || (move + self.blankIndex > 15 || move + self.blankIndex < 0) );
-    
     NSInteger newPosition = move + self.blankIndex;
-    
     if ( move == -4 ) { // move up
         if ( newPosition > 11 ) {
             // do nothing
@@ -58,7 +54,7 @@
             // do nothing
         } else {
             prevMove = move;
-            [tilesToSwap addObject:[self.gameTiles objectAtIndex:self.blankIndex + move]];
+            [tilesToSwap addObject:[self.gameTiles objectAtIndex:newPosition]];
             self.blankIndex = newPosition;
         }
     }
@@ -67,7 +63,7 @@
             // do nothing
         } else {
             prevMove = move;
-            [tilesToSwap addObject:[self.gameTiles objectAtIndex:self.blankIndex + move]];
+            [tilesToSwap addObject:[self.gameTiles objectAtIndex:newPosition]];
             self.blankIndex = newPosition;
         }
     }
@@ -76,7 +72,7 @@
             // do nothing
         } else {
             prevMove = move;
-            [tilesToSwap addObject:[self.gameTiles objectAtIndex:self.blankIndex + move]];
+            [tilesToSwap addObject:[self.gameTiles objectAtIndex:newPosition]];
             self.blankIndex = newPosition;
         }
     }
@@ -106,11 +102,9 @@
             break;
         }
     }
-
     [self.gameTiles exchangeObjectAtIndex:[self.gameTiles indexOfObject:[swapTiles objectAtIndex:0]]
                         withObjectAtIndex:[self.gameTiles indexOfObject:[swapTiles objectAtIndex:1]]];
     self.blankIndex = [self.gameTiles indexOfObject:[swapTiles objectAtIndex:0]];
-    
     return swapTiles;
 }
 
@@ -165,9 +159,7 @@
         switchIndex = self.blankIndex + 4;
         buttonToSwap = [self.gameTiles objectAtIndex:switchIndex];
     }
-
     [self.gameTiles exchangeObjectAtIndex:switchIndex withObjectAtIndex:self.blankIndex];
-    
     NSArray *array = @[[NSNumber numberWithInt:(int)switchIndex], [NSNumber numberWithInteger:self.blankIndex]];
     self.blankIndex = switchIndex;
     return array;
