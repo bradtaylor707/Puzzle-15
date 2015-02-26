@@ -7,10 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "PuzzleGame.h"
 
 @interface ViewController () {
-    
+    BOOL animationInProgress;
+    NSInteger difficulty;
 }
+
+@property (nonatomic, strong) NSMutableArray *gameTiles;
+@property (nonatomic, strong) PuzzleGame *puzzleGame;
 
 @property (weak, nonatomic) IBOutlet UIButton *oneTile;
 @property (weak, nonatomic) IBOutlet UIButton *twoTile;
@@ -36,31 +41,133 @@
 
 @end
 
+static const CGFloat animationSpeed = 0.35;
+
 @implementation ViewController
 
-- (void)viewDidLoad {
+-(void) viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+ 
     [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    self.puzzleGame = [[PuzzleGame alloc] init];
+    animationInProgress = NO;
+    difficulty = 25;
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSlideATile:)];
+    [rightSwipe setDirection:UISwipeGestureRecognizerDirectionRight];
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSlideATile:)];
+    [leftSwipe setDirection:UISwipeGestureRecognizerDirectionLeft];
+    UISwipeGestureRecognizer *downSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSlideATile:)];
+    [downSwipe setDirection:UISwipeGestureRecognizerDirectionDown];
+    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSlideATile:)];
+    [upSwipe setDirection:UISwipeGestureRecognizerDirectionUp];
+    
+    [self.view addGestureRecognizer:leftSwipe];
+    [self.view addGestureRecognizer:rightSwipe];
+    [self.view addGestureRecognizer:downSwipe];
+    [self.view addGestureRecognizer:upSwipe];
+    
+    [self.puzzleGame startGameWithTiles:self.gameTiles];
+}
 
-}
-- (IBAction)didTapShuffleButton:(UIButton *)sender {
-    NSLog(@"Tapped the %@ button.", [sender currentTitle]);
-}
-- (IBAction)didTapResetButton:(UIButton *)sender {
-    NSLog(@"Tapped the %@ button.", [sender currentTitle]);
-}
-- (IBAction)didTapTileButton:(UIButton *)sender {
-    NSLog(@"Tapped the %@ button.", [sender currentTitle]);
-}
-- (IBAction)didMoveSlider:(UISlider *)sender {
-    NSLog(@"Slider is now at %@", @([self.shuffleSlider value]));
+// array holding tile buttons
+-(NSMutableArray *) gameTiles
+{
+    if ( ! _gameTiles )
+        _gameTiles = [NSMutableArray arrayWithObjects:self.oneTile, self.twoTile, self.threeTile, self.fourTile,
+                      self.fiveTile, self.sixTile, self.sevenTile, self.eightTile, self.nineTile,
+                      self.tenTile, self.elevenTile, self.twelveTile, self.thirteenTile, self.fourteenTile,
+                      self.fifteenTile, self.blankTile, nil];
+    return _gameTiles;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// shuffle button, mix the tiles
+-(IBAction) didTapShuffleButton:(UIButton *)sender {
+    if ( animationInProgress )
+        return;
+    for (int i = 0; i < difficulty; i++) {
+        NSMutableArray *array = [self.puzzleGame shuffleTiles];
+        UIButton *tile1 = [array objectAtIndex:0];
+        UIButton *tile2 = [array objectAtIndex:1];
+        [UIView animateWithDuration:animationSpeed animations:^{
+            animationInProgress = YES;
+            CGRect temp = tile2.frame;
+            tile2.frame = tile1.frame;
+            tile1.frame = temp;
+        } completion:^(BOOL finished) {
+            animationInProgress = NO;
+        }];
+    }
+}
+
+// reset button, revert the tiles
+-(IBAction) didTapResetButton:(UIButton *)sender {
+    if ( animationInProgress )
+        return;
+    if ( [self.puzzleGame isSolved] )
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Puzzle is already in solved position." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+    else {
+        animationInProgress = YES;
+        NSMutableArray *array = [self.puzzleGame revertTiles];
+        UIButton *tile1 = [array objectAtIndex:0];
+        UIButton *tile2 = [array objectAtIndex:1];
+        [UIView animateWithDuration:animationSpeed animations:^{
+            CGRect temp = tile2.frame;
+            tile2.frame = tile1.frame;
+            tile1.frame = temp;
+        } completion:^(BOOL finished) {
+            animationInProgress = NO;
+            if ( ! [self.puzzleGame isSolved] )
+                [self didTapResetButton:nil];
+        }];
+    }
+}
+
+// moved slider, set difficulty
+-(IBAction) didMoveSlider:(UISlider *)sender {
+    double value = [self.shuffleSlider value] * 50;
+    difficulty = (int) value;
+    if ( ! difficulty )
+        difficulty = 1;
+}
+
+-(void) checkForWinner
+{
+    if ( [self.puzzleGame isSolved] )
+        [[[UIAlertView alloc] initWithTitle:@"You Win!"
+                                    message:@"Congratulations, you solved the puzzle!"
+                                   delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil]
+         show];
+}
+
+-(void) didSlideATile:(UISwipeGestureRecognizer *) sender
+{
+    if (animationInProgress)
+        return;
+    
+    if ([self.puzzleGame canSwipeInDirection:[sender direction]]) {
+        animationInProgress = YES;
+        NSArray *buttonIndexes = [self.puzzleGame buttonsToSwapWithDirection:[sender direction]];
+        UIButton *tile1 = [self.gameTiles objectAtIndex:[[buttonIndexes objectAtIndex:0] integerValue]];
+        UIButton *tile2 = [self.gameTiles objectAtIndex:[[buttonIndexes objectAtIndex:1] integerValue]];
+        [UIView animateWithDuration:animationSpeed animations:^{
+            CGRect temp = tile2.frame;
+            tile2.frame = tile1.frame;
+            tile1.frame = temp;
+        } completion:^(BOOL finished) {
+            animationInProgress = NO;
+            [self checkForWinner];
+        }];
+    }
+}
+
+- (void) dealloc
+{
+    self.gameTiles = nil;
+    self.puzzleGame = nil;
 }
 
 @end

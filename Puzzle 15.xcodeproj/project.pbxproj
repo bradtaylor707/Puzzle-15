@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2269A0B1A9479B400892EB0 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = A2269A0A1A9479B400892EB0 /* title.png */; };
+		A2269A0F1A947B5F00892EB0 /* shuffleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A2269A0D1A947B5F00892EB0 /* shuffleButton.png */; };
+		A2269A111A947C2800892EB0 /* resetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A2269A101A947C2800892EB0 /* resetButton.png */; };
+		A257FAD51A956CC8002DA810 /* PuzzleGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A257FAD41A956CC8002DA810 /* PuzzleGame.m */; };
 		A2DB98FD1A940EC000CBBEDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB98FC1A940EC000CBBEDB /* main.m */; };
 		A2DB99001A940EC000CBBEDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB98FF1A940EC000CBBEDB /* AppDelegate.m */; };
 		A2DB99031A940EC000CBBEDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB99021A940EC000CBBEDB /* ViewController.m */; };
@@ -44,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2269A0A1A9479B400892EB0 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		A2269A0D1A947B5F00892EB0 /* shuffleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffleButton.png; sourceTree = "<group>"; };
+		A2269A101A947C2800892EB0 /* resetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resetButton.png; sourceTree = "<group>"; };
+		A257FAD31A956CC8002DA810 /* PuzzleGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleGame.h; sourceTree = "<group>"; };
+		A257FAD41A956CC8002DA810 /* PuzzleGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleGame.m; sourceTree = "<group>"; };
 		A2DB98F71A940EC000CBBEDB /* Puzzle 15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puzzle 15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DB98FB1A940EC000CBBEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DB98FC1A940EC000CBBEDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +129,8 @@
 				A2DB98FF1A940EC000CBBEDB /* AppDelegate.m */,
 				A2DB99011A940EC000CBBEDB /* ViewController.h */,
 				A2DB99021A940EC000CBBEDB /* ViewController.m */,
+				A257FAD31A956CC8002DA810 /* PuzzleGame.h */,
+				A257FAD41A956CC8002DA810 /* PuzzleGame.m */,
 				A2DB99041A940EC000CBBEDB /* Main.storyboard */,
 				A2DB99071A940EC000CBBEDB /* Images.xcassets */,
 				A2DB99091A940EC000CBBEDB /* LaunchScreen.xib */,
@@ -131,6 +142,9 @@
 		A2DB98FA1A940EC000CBBEDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2269A101A947C2800892EB0 /* resetButton.png */,
+				A2269A0D1A947B5F00892EB0 /* shuffleButton.png */,
+				A2269A0A1A9479B400892EB0 /* title.png */,
 				A2E007021A94211B00487DFB /* blankTile.png */,
 				A2E007031A94211B00487DFB /* fifteenTile.png */,
 				A2E007041A94211B00487DFB /* fourteenTile.png */,
@@ -250,8 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2269A0F1A947B5F00892EB0 /* shuffleButton.png in Resources */,
 				A2E007171A94211B00487DFB /* elevenTile.png in Resources */,
 				A2E007131A94211B00487DFB /* fifteenTile.png in Resources */,
+				A2269A0B1A9479B400892EB0 /* title.png in Resources */,
 				A2E0071C1A94211B00487DFB /* sixTile.png in Resources */,
 				A2DB99061A940EC000CBBEDB /* Main.storyboard in Resources */,
 				A2DB990B1A940EC000CBBEDB /* LaunchScreen.xib in Resources */,
@@ -261,6 +277,7 @@
 				A2E007231A94268100487DFB /* Entitlements.plist in Resources */,
 				A2E007141A94211B00487DFB /* fourteenTile.png in Resources */,
 				A2E0071B1A94211B00487DFB /* sevenTile.png in Resources */,
+				A2269A111A947C2800892EB0 /* resetButton.png in Resources */,
 				A2E007121A94211B00487DFB /* blankTile.png in Resources */,
 				A2E0071E1A94211B00487DFB /* fourTile.png in Resources */,
 				A2E007151A94211B00487DFB /* thirteenTile.png in Resources */,
@@ -290,6 +307,7 @@
 				A2DB99031A940EC000CBBEDB /* ViewController.m in Sources */,
 				A2DB99001A940EC000CBBEDB /* AppDelegate.m in Sources */,
 				A2DB98FD1A940EC000CBBEDB /* main.m in Sources */,
+				A257FAD51A956CC8002DA810 /* PuzzleGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

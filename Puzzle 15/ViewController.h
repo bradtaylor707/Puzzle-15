@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+-(IBAction) didTapShuffleButton:(UIButton *)sender;
+-(IBAction) didTapResetButton:(UIButton *)sender;
+-(IBAction) didMoveSlider:(UISlider *)sender;
+-(void) didSlideATile:(UISwipeGestureRecognizer *)sender;
 
 @end
 
